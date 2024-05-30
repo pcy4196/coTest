@@ -32,11 +32,10 @@ for _ in range(n):
     l, d, x, y = map(int, input().split())
     # 격자판 시작 index가 0 이기때문에 -1 처리
     x -= 1; y -= 1
-    # 처음 값 변경 처리
-    pan[x][y] = 1
+    
     # 두번째 값부터 변경 처리
     if l > 1:
-        for i in range(1, l):
+        for i in range(l):
             if d == 0:
                 pan[x][y+i] = 1
             else:
