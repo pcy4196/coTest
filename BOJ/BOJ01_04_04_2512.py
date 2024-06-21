@@ -18,8 +18,8 @@ while low <= high:
     sum = 0                 # 현재 예산 상한선으로 배정된 예산의 합계
 
     # 모든 예산 요청에 대해 예산 상한선을 적용
-    for I in arr:
-        sum += min(I, mid)
+    for i in arr:
+        sum += min(i, mid)
 
     # 예산 합계가 총 예산을 넘는 경우
     if sum > M:
