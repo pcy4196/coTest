@@ -37,9 +37,9 @@ while f:
         nx = r + dx[i]
         ny = c + dy[i]
         if 0 <= nx < R and 0 <= ny < C:
-            if fDist[nx][ny] == 0 and arr[nx][ny] != '#':  # 방문하지 않은 곳
-                fDist[nx][ny] = fDist[r][c] + 1  # 이동 거리 갱신
-                f.append((nx, ny))  # 새로운 불 위치 추가
+            if fDist[nx][ny] == 0 and arr[nx][ny] != '#':   # 방문하지 않은 곳
+                fDist[nx][ny] = fDist[r][c] + 1             # 이동 거리 갱신
+                f.append((nx, ny))                          # 새로운 불 위치 추가
 
 # 지훈의 BFS (너비 우선 탐색)
 while j:
@@ -47,9 +47,9 @@ while j:
     for i in range(4):
         nx = r + dx[i]
         ny = c + dy[i]
-        if not (0 <= nx < R and 0 <= ny < C):  # 지훈이 탈출 가능한 경우
-            print(jDist[r][c])  # 현재까지의 이동 거리 출력
-            sys.exit()          # 프로그램 종료
+        if not (0 <= nx < R and 0 <= ny < C):   # 지훈이 탈출 가능한 경우
+            print(jDist[r][c])                  # 현재까지의 이동 거리 출력
+            sys.exit()                          # 프로그램 종료
         if 0 <= nx < R and 0 <= ny < C:
             if jDist[nx][ny] == 0 and arr[nx][ny] != '#':  # 방문하지 않은 곳
                 if fDist[nx][ny] > jDist[r][c] + 1 or fDist[nx][ny] == 0:  
