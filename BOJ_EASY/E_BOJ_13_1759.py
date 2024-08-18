@@ -9,7 +9,7 @@ L, C = map(int, input().split())
 zipArr = list(input().split())
 
 # 알파벳을 사전순으로 정렬
-zipArr.sort(key=lambda x: x)
+zipArr.sort(key=lambda x : x)
 
 # 재귀함수를 이용해 가능한 암호를 생성하는 함수
 def rec(start, level, code):
